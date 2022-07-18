@@ -35,6 +35,7 @@
         <module>order_service</module>
         <module>eureka_server</module>
         <module>feign_api</module>
+        <module>gateway</module>
     </modules>
 
 
