@@ -49,6 +49,7 @@ spring:
             allowedOrigins:
               - "http://localhost:8080"
               - "http://localhost:8082"
+              - "http://localhost:8093"
             # 允许的跨域ajax的请求方式
             allowedMethods:
               - "GET"
