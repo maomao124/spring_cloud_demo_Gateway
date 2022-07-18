@@ -4,10 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import mao.user_service.entity.User;
 import mao.user_service.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -39,9 +36,10 @@ public class UserController
      * @return User
      */
     @GetMapping("/{id}")
-    public User queryById(@PathVariable("id") Long id)
+    public User queryById(@PathVariable("id") Long id, @RequestHeader("key1") String key1)
     {
         //log.debug("user被访问了："+id);
+        log.info("请求头key1：" + key1);
         return userService.queryById(id);
     }
 }
