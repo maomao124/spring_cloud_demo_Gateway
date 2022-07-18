@@ -59,3 +59,55 @@ com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/i
 2022-07-18 12:43:18.348  INFO 18660 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-18 12:43:18.352  INFO 18660 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-07-18 12:43:18.353  INFO 18660 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-07-18 13:31:34.645  INFO 16436 --- [main] m.order_service.OrderServiceApplication  : No active profile set, falling back to default profiles: default
+2022-07-18 13:31:35.105  INFO 16436 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=832e6f6d-61e4-3a8e-b7e1-d4bdded1e193
+2022-07-18 13:31:35.315  INFO 16436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-18 13:31:35.323  INFO 16436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-18 13:31:35.323  INFO 16436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-07-18 13:31:35.432  INFO 16436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-18 13:31:35.432  INFO 16436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 774 ms
+2022-07-18 13:31:35.518  INFO 16436 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-07-18 13:31:35.604  INFO 16436 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-07-18 13:31:36.009  WARN 16436 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-18 13:31:36.009  INFO 16436 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-18 13:31:36.012  WARN 16436 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-07-18 13:31:36.012  INFO 16436 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-07-18 13:31:36.087  INFO 16436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-18 13:31:36.152  INFO 16436 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-18 13:31:36.501  INFO 16436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-18 13:31:36.510  INFO 16436 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP orderservice 192.168.202.1:8081 register finished
+2022-07-18 13:31:36.620  INFO 16436 --- [main] m.order_service.OrderServiceApplication  : Started OrderServiceApplication in 2.743 seconds (JVM running for 3.252)
+2022-07-18 13:31:36.728  INFO 16436 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: userservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-07-18 13:31:36.739  INFO 16436 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-07-18 13:31:36.768  INFO 16436 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client userservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=userservice,current list of Servers=[192.168.202.1:8082],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.202.1:8082;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@3caf5c96
+2022-07-18 13:32:45.544  INFO 16436 --- [http-nio-8081-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-18 13:32:45.545  INFO 16436 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-18 13:32:45.550  INFO 16436 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-18 13:32:45.804 DEBUG 16436 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==>  Preparing: select * from tb_order where id = ?
+2022-07-18 13:32:45.821 DEBUG 16436 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : ==> Parameters: 101(Long)
+2022-07-18 13:32:45.841 DEBUG 16436 --- [http-nio-8081-exec-5] m.o.mapper.OrderMapper.findById          : <==      Total: 1
+2022-07-18 13:32:45.845 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> GET http://userservice/user/1 HTTP/1.1
+2022-07-18 13:32:45.845 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] ---> END HTTP (0-byte body)
+2022-07-18 13:32:46.222 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- HTTP/1.1 200  (375ms)
+2022-07-18 13:32:46.222 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] connection: keep-alive
+2022-07-18 13:32:46.222 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] content-type: application/json
+2022-07-18 13:32:46.222 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] date: Mon, 18 Jul 2022 05:32:46 GMT
+2022-07-18 13:32:46.222 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] keep-alive: timeout=60
+2022-07-18 13:32:46.222 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] transfer-encoding: chunked
+2022-07-18 13:32:46.222 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] 
+2022-07-18 13:32:46.223 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] {"id":1,"username":"柳岩","address":"湖南省衡阳市"}
+2022-07-18 13:32:46.223 DEBUG 16436 --- [http-nio-8081-exec-5] mao.feign.feign.UserClient               : [UserClient#queryById] <--- END HTTP (59-byte body)
+2022-07-18 14:09:31.426  WARN 16436 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-07-18 14:09:31.426  WARN 16436 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-07-18 14:09:31.426  INFO 16436 --- [Thread-16] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-07-18 14:09:31.426  WARN 16436 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-07-18 14:09:31.427  WARN 16436 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-07-18 14:09:31.442  INFO 16436 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-07-18 14:09:31.443  INFO 16436 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-07-18 14:09:31.445  INFO 16436 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-07-18 14:09:37.499  WARN 16436 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException: Cannot invoke "com.alibaba.nacos.api.naming.NamingService.shutDown()" because "this.namingService" is null
+2022-07-18 14:09:37.500  INFO 16436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-18 14:09:37.511  INFO 16436 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-07-18 14:09:37.512  INFO 16436 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

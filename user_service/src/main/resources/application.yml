@@ -41,7 +41,7 @@ logging:
   # 设置日志组
   group:
     # 自定义组名，设置当前组中所包含的包
-    mao_pro: mao
+    mao_pro: mao.user_service
   level:
     root: info
     # 为对应组设置日志级别
